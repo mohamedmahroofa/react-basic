@@ -1,11 +1,11 @@
 const reactDescription = ["Fundamental", "Core", "Crucial"];
 
-function genRandomNum(max){
-  return Math.floor(Math.random() * (max + 1));
-}
+let descriptionLength = reactDescription.length;
+
+const randomValue = Math.floor(Math.random() * descriptionLength); 
 
 function Header(){
-  const description = reactDescription[genRandomNum(2)];
+  const description = reactDescription[randomValue];
 
   return (
     <header>
