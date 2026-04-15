@@ -1,8 +1,13 @@
 import Header from "./components/Header/Header.jsx";
 import CoreConcepts from "./components/CoreConcepts.jsx";
 import { CORE_CONCEPTS } from "./data.js";
+import TabButtons from "./components/TabButtons.jsx";
 
 function App() {
+  function handleSelect(){
+    console.log("A better way to add it dynamically");
+  }
+  
   return (
     <div>
       <Header />
@@ -19,7 +24,15 @@ function App() {
             <CoreConcepts {...CORE_CONCEPTS[3]} />
           </ul>
         </section>
-        <h2>Time to get started!</h2>
+        <section id="examples">
+          <h2>Examples</h2>
+          <menu>
+            <TabButtons onSelect={handleSelect}>Components</TabButtons>
+            <TabButtons onSelect={handleSelect}>JSX</TabButtons>
+            <TabButtons onSelect={handleSelect}>Props</TabButtons>
+            <TabButtons onSelect={handleSelect}>State</TabButtons>
+          </menu>
+        </section>
       </main>
     </div>
   );
