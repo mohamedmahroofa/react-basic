@@ -1,4 +1,5 @@
 import TabButtons from "./TabButtons.jsx";
+import Section from "./Section.jsx";
 import { useState } from "react";
 import { EXAMPLES } from "../data.js";
 
@@ -24,35 +25,34 @@ export default function Examples() {
   }
 
   return (
-    <section id="examples">
-      <h2>Examples</h2>
+    <Section title="Examples" id="examples">
       <menu>
         <TabButtons
           isSelected={selectedTopic === "components"}
-          onSelect={() => handleSelect("components")}
+          onClick={() => handleSelect("components")}
         >
           Components
         </TabButtons>
         <TabButtons
           isSelected={selectedTopic === "jsx"}
-          onSelect={() => handleSelect("jsx")}
+          onClick={() => handleSelect("jsx")}
         >
           JSX
         </TabButtons>
         <TabButtons
           isSelected={selectedTopic === "props"}
-          onSelect={() => handleSelect("props")}
+          onClick={() => handleSelect("props")}
         >
           Props
         </TabButtons>
         <TabButtons
           isSelected={selectedTopic === "state"}
-          onSelect={() => handleSelect("state")}
+          onClick={() => handleSelect("state")}
         >
           State
         </TabButtons>
       </menu>
       {tabContent}
-    </section>
+    </Section>
   );
 }
