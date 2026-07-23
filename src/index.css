@@ -9,7 +9,7 @@ html {
   line-height: 1.5;
 
   color: #ebe7ef;
-  background: radial-gradient(#280a48, #20043d);
+  background: radial-gradient(circle at top, #351052 0%, #18082a 52%, #09040f 100%);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
