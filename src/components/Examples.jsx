@@ -28,6 +28,7 @@ export default function Examples() {
   return (
     <Section title="Examples" id="examples">
       <Tabs
+      // you can add tabButtons = "menu" or any element here
         buttons={
           <>
             <TabButtons
